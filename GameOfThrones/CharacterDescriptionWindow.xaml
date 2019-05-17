@@ -1,0 +1,53 @@
+﻿<Window x:Class="GameOfThrones.CharacterDescriptionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameOfThrones"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Height="450" Width="800" Loaded="CharacterWindowLoaded">
+    <Grid Background="#FF020202" Margin="0,0,-91,-152">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Image Source="GOfT.jpg" Margin="0,-6,0,5.6" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" Grid.RowSpan="10" Height="420" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <materialDesign:Card materialDesign:ShadowAssist.ShadowEdges="All" materialDesign:ShadowAssist.Darken="True" materialDesign:ShadowAssist.ShadowDepth="Depth5" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="550" Height="60" Background="#808080">
+            <TextBlock Foreground="WhiteSmoke" Name="characterText" FontSize="40" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </materialDesign:Card>
+        <materialDesign:Card materialDesign:ShadowAssist.ShadowEdges="All" materialDesign:ShadowAssist.Darken="True" materialDesign:ShadowAssist.ShadowDepth="Depth5" Grid.Column="1" Grid.Row="2" Margin="20 0 0 0" VerticalAlignment="Center"  HorizontalAlignment="Left"  Width="300" Height="40" Background="#0000FF">
+            <TextBlock Foreground="WhiteSmoke" Name="fatherText" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </materialDesign:Card>
+        <materialDesign:Card materialDesign:ShadowAssist.ShadowEdges="All" materialDesign:ShadowAssist.Darken="True" materialDesign:ShadowAssist.ShadowDepth="Depth5" Grid.Column="1" Grid.Row="3" Margin="20 0 0 0" VerticalAlignment="Center"  HorizontalAlignment="Left"  Width="300" Height="40" Background="#8B00FF">
+            <TextBlock Foreground="WhiteSmoke" Name="motherText" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </materialDesign:Card>
+        <materialDesign:Card materialDesign:ShadowAssist.ShadowEdges="All" materialDesign:ShadowAssist.Darken="True" materialDesign:ShadowAssist.ShadowDepth="Depth5" Grid.Column="1" Grid.Row="4" Margin="20 0 0 0" VerticalAlignment="Center"  HorizontalAlignment="Left"  Width="300" Height="40" Background="#CC99FE">
+            <TextBlock Foreground="WhiteSmoke" Name="houseText" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </materialDesign:Card>
+
+        <materialDesign:Card materialDesign:ShadowAssist.ShadowEdges="All" materialDesign:ShadowAssist.Darken="True" materialDesign:ShadowAssist.ShadowDepth="Depth5" Grid.Column="1" Grid.Row="5" Margin="20,9,0,1" VerticalAlignment="Center"  HorizontalAlignment="Left"  Width="430" Height="161" Background="#E0FFFF" Grid.RowSpan="3">
+            <StackPanel>
+                <TextBlock Foreground="Black" Text="Title: " FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                <ListBox Foreground="Black" Name="titlesList" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#E0FFFF"/>
+            </StackPanel>
+        </materialDesign:Card>
+        <Image Source="https://api.got.show/api/show/images/" Grid.Column="0" Grid.RowSpan="10" Name="characterPhoto" Margin="10 40" OpacityMask="#FF434247" />
+
+        <materialDesign:Card materialDesign:ShadowAssist.ShadowEdges="All" materialDesign:ShadowAssist.Darken="True" materialDesign:ShadowAssist.ShadowDepth="Depth5" Grid.Column="0" Grid.Row="0"  Margin="20 0 0 0" VerticalAlignment="Center"  HorizontalAlignment="Left"  Width="300" Height="40" Background="#808080">
+            <TextBlock Foreground="WhiteSmoke" Name="actorText" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </materialDesign:Card>
+    </Grid>
+</Window>
